@@ -17,8 +17,8 @@ command! -nargs=? CBuild call s:cbuild(<f-args>)
 
 function! s:cbuild(...)
 	if a:0 == 0
-		if exists("g:cmake_default_build_type")
-			let s:build_type=g:default_build_type
+		if exists("g:cbuild_default_build_type")
+			let s:build_type=g:cbuild_default_build_type
 		else
 			let s:build_type="debug"
 		endif
