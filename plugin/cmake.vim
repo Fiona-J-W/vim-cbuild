@@ -49,7 +49,7 @@ function! s:cbuild(...)
 	let s:cmd = "cmake -GNinja ../.."
 	let s:res = system(s:cmd)
 	echo s:res
-	let s:res = system("ninja")
+	execute("!ninja")
 	echo s:res
 	exec 'cd -'
 endfunction
