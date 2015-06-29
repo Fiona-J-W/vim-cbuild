@@ -43,9 +43,7 @@ function! s:cbuild(...)
 		return 3
 	endif
 
-	echo "type = " . s:build_type
-	echo "Build-dir = ".s:build_dir
 	exec 'cd' s:build_dir
-	execute("!cmake -GNinja ../.. && ninja")
+	execute('!cmake -GNinja ../.. && ninja && if ninja -t targets | grep -q test:; then ninja test; fi')
 	exec 'cd -'
 endfunction
