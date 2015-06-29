@@ -8,6 +8,11 @@ which `cmake ../..` and `ninja` are called.
 It is the users task to make sure that the sub-directory exists
 and that it already contains the desired cmake-configuration.
 
+*WARNING* This plugin is still in alpha-phase which mainly means that I am
+still experimenting regarding what the best way to implement this is.
+Expect unanounced breaking changes both regarding configuration-options
+and runtime-behavior.
+
 Commands
 --------
 
