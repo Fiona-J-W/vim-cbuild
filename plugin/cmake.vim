@@ -46,10 +46,6 @@ function! s:cbuild(...)
 	echo "type = " . s:build_type
 	echo "Build-dir = ".s:build_dir
 	exec 'cd' s:build_dir
-	let s:cmd = "cmake -GNinja ../.."
-	let s:res = system(s:cmd)
-	echo s:res
-	execute("!ninja")
-	echo s:res
+	execute("!cmake -GNinja ../.. && ninja")
 	exec 'cd -'
 endfunction
